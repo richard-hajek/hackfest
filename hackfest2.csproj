@@ -50,6 +50,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="addons\**\*.cs" />
+    <Compile Include="objects\door.cs" />
+    <Compile Include="objects\DoorAnimation.cs" />
     <Compile Include="objects\Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

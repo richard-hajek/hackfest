@@ -2,10 +2,6 @@
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hackfest2", "hackfest2.csproj", "{0830584A-1E10-461F-892E-7E73241232F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PluginsTests", "..\GodotPlugins\PluginsTests\PluginsTests.csproj", "{66181FD8-3507-463A-A495-12BFDCA60326}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GodotPlugins", "..\GodotPlugins\GodotPlugins.csproj", "{7879509A-D27A-48E6-AA77-8D9940C0F902}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 	Debug|Any CPU = Debug|Any CPU
