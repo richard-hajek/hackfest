@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://addons/godot-vm-plugin/TerminalContainer.cs" type="Script" id=1]
+
+[node name="GUI" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Terminal" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -311.5
+margin_top = -191.0
+margin_right = 311.5
+margin_bottom = 191.0
+script = ExtResource( 1 )
