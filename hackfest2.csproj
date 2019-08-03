@@ -49,11 +49,7 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="addons\**\*.cs" />
-    <Compile Include="objects\door.cs" />
-    <Compile Include="objects\DoorAnimation.cs" />
-    <Compile Include="objects\Player.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="**\*.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
