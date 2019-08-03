@@ -1,6 +1,6 @@
-﻿Microsoft Visual Studio Solution File, Format Version 12.00
+Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hackfest2", "hackfest2.csproj", "{0830584A-1E10-461F-892E-7E73241232F4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hackfest2", "hackfest2.csproj", "{4E05867D-527E-4E68-93FE-2B72EA874430}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,23 +9,11 @@ Global
 	Tools|Any CPU = Tools|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0830584A-1E10-461F-892E-7E73241232F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0830584A-1E10-461F-892E-7E73241232F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0830584A-1E10-461F-892E-7E73241232F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0830584A-1E10-461F-892E-7E73241232F4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0830584A-1E10-461F-892E-7E73241232F4}.Tools|Any CPU.ActiveCfg = Tools|Any CPU
-		{0830584A-1E10-461F-892E-7E73241232F4}.Tools|Any CPU.Build.0 = Tools|Any CPU
-		{66181FD8-3507-463A-A495-12BFDCA60326}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{66181FD8-3507-463A-A495-12BFDCA60326}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{66181FD8-3507-463A-A495-12BFDCA60326}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{66181FD8-3507-463A-A495-12BFDCA60326}.Release|Any CPU.Build.0 = Release|Any CPU
-		{66181FD8-3507-463A-A495-12BFDCA60326}.Tools|Any CPU.ActiveCfg = Debug|Any CPU
-		{66181FD8-3507-463A-A495-12BFDCA60326}.Tools|Any CPU.Build.0 = Debug|Any CPU
-		{7879509A-D27A-48E6-AA77-8D9940C0F902}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7879509A-D27A-48E6-AA77-8D9940C0F902}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7879509A-D27A-48E6-AA77-8D9940C0F902}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7879509A-D27A-48E6-AA77-8D9940C0F902}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7879509A-D27A-48E6-AA77-8D9940C0F902}.Tools|Any CPU.ActiveCfg = Tools|Any CPU
-		{7879509A-D27A-48E6-AA77-8D9940C0F902}.Tools|Any CPU.Build.0 = Tools|Any CPU
+		{4E05867D-527E-4E68-93FE-2B72EA874430}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E05867D-527E-4E68-93FE-2B72EA874430}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E05867D-527E-4E68-93FE-2B72EA874430}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E05867D-527E-4E68-93FE-2B72EA874430}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E05867D-527E-4E68-93FE-2B72EA874430}.Tools|Any CPU.ActiveCfg = Tools|Any CPU
+		{4E05867D-527E-4E68-93FE-2B72EA874430}.Tools|Any CPU.Build.0 = Tools|Any CPU
 	EndGlobalSection
 EndGlobal
