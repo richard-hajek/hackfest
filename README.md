@@ -15,9 +15,9 @@ Hackfest should run on Windows, Linux, however Windows is untested.
 
 ## Instructions ( Arch Linux )
 
-#### * Instructions for other platforms / distros should be the same, except for 1. step
+* Instructions for other platforms / distros should be the same, except for 1. step
 
-1. Install packages `virtualbox`, `virtualbox-host-modules-arch`, `vagrant`, `godot-mono-bit<sup>AUR</sup>`
+1. Install packages `virtualbox`, `virtualbox-host-modules-arch`, `vagrant`, `godot-mono-bit`<sup>AUR</sup>
 2. Clone repo `git clone git@github.com:meowxiik/hackfest.git`
 3. Open Godot, open the cloned project
 4. Navigate to `scenes/Demo` in FileSystem explorer
