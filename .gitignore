@@ -4,3 +4,4 @@
 objects
 packages
 *.import
+mono_crash*
