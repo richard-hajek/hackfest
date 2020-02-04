@@ -13,10 +13,12 @@ Hackfest should run on Windows, Linux, however Windows is untested.
 - Godot
 - C# Mono
 
-## Instructions
+## Instructions ( Arch Linux )
 
-1. Download and install the dependencies
-2. Clone this repo `git clone git@github.com:meowxiik/hackfest.git`
-3. Open project in Godot
-4. Navigate to scene `scenes/Demo`
-5. Run that scene
+#### * Instructions for other platforms / distros should be the same, except for 1. step
+
+1. Install packages `virtualbox`, `virtualbox-host-modules-arch`, `vagrant`, `godot-mono-bit<sup>AUR</sup>`
+2. Clone repo `git clone git@github.com:meowxiik/hackfest.git`
+3. Open Godot, open the cloned project
+4. Navigate to `scenes/Demo` in FileSystem explorer
+5. Run the scene using an icon in upper right corner
