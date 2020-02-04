@@ -1,0 +1,59 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://assets/materials/green_metal_rust/green_metal_rust_AO_2k.png" type="Texture" id=1]
+[ext_resource path="res://assets/models/dae/terminal.dae" type="PackedScene" id=2]
+[ext_resource path="res://assets/materials/textures/keyboard.jpg" type="Texture" id=3]
+[ext_resource path="res://assets/materials/green_metal_rust/green_metal_rust_Nor_2k.png" type="Texture" id=4]
+
+[sub_resource type="ConvexPolygonShape" id=1]
+points = PoolVector3Array( -1, 0.67867, -0.67867, -2.40498, 0.370319, 0.370319, -1, 0.67867, 0.67867, -1, 0.938006, -0.938006, 1, -1, -1, -1, -0.938006, -0.938006, 1, -0.90018, 0.90018, 0.572165, 0.90018, 0.90018, 1, 0.90018, 0.90018, 1, 1, 1, -1, -0.938006, 0.938006, 1, -1, 1, 1, -1, -1, -1, -0.938006, -0.938006, 1, 1, 1, 1, 1, -1, -1, -0.67867, -0.67867, -1, -0.938006, 0.938006, -1, -0.67867, 0.67867, -1, 0.938006, 0.938006, -1, 0.67867, 0.67867, -1, 0.938006, -0.938006, -1, 0.67867, -0.67867, -1, -0.938006, -0.938006, -2.40498, 0.370319, 0.370319, -2.40498, -0.370319, -0.370319, -2.40498, -0.370319, 0.370319, -1, -0.67867, 0.67867, -2.40498, -0.370319, -0.370319, -1, -0.67867, -0.67867, -1, -0.67867, -0.67867, -2.40498, 0.370319, -0.370319, -1, 0.67867, 0.67867, -2.40498, -0.370319, 0.370319, 1, -0.90018, -0.90018, 1, 1, -1, 1, 0.90018, -0.90018, 1, -0.90018, 0.90018, 1, -1, -1, 1, 1, 1, 1, 0.90018, 0.90018, 1, -1, 1, 1, -0.90018, -0.90018, 0.572165, -0.90018, 0.90018, 1, 0.90018, 0.90018, 0.572165, 0.90018, -0.90018, 1, 0.90018, -0.90018, 0.572165, -0.90018, -0.90018, 1, -0.90018, -0.90018, 0.572165, -0.840876, -0.840876, 0.572165, 0.90018, -0.90018, 0.572165, 0.840876, -0.840876, 0.572165, -0.840876, 0.840876, 0.572165, -0.90018, -0.90018, 0.572165, 0.90018, 0.90018, 0.572165, 0.840876, 0.840876, 0.572165, -0.90018, 0.90018, -1, 0.938006, 0.938006, -1, 0.938006, 0.938006, -2.40498, 0.370319, -0.370319, -2.40498, -0.370319, -0.370319, -2.40498, 0.370319, 0.370319, 0.572165, -0.90018, -0.90018, 0.572165, 0.90018, 0.90018, 0.572165, 0.840876, -0.840876, 0.572165, -0.840876, 0.840876, 0.572165, -0.840876, -0.840876, 0.572165, 0.840876, 0.840876 )
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_texture = ExtResource( 1 )
+normal_enabled = true
+normal_scale = 1.0
+normal_texture = ExtResource( 4 )
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_texture = ExtResource( 1 )
+normal_enabled = true
+normal_scale = 1.0
+normal_texture = ExtResource( 4 )
+
+[sub_resource type="SpatialMaterial" id=4]
+albedo_color = Color( 0, 0, 0, 1 )
+metallic_specular = 1.0
+roughness = 0.0
+emission_enabled = true
+emission = Color( 0.352941, 0.352941, 0.352941, 1 )
+emission_energy = 1.0
+emission_operator = 0
+emission_on_uv2 = false
+
+[sub_resource type="SpatialMaterial" id=5]
+albedo_texture = ExtResource( 1 )
+normal_enabled = true
+normal_scale = 1.0
+normal_texture = ExtResource( 4 )
+
+[sub_resource type="SpatialMaterial" id=6]
+albedo_texture = ExtResource( 3 )
+
+[node name="Terminal" instance=ExtResource( 2 )]
+
+[node name="StaticBody" type="StaticBody" parent="." index="0"]
+transform = Transform( 0.475679, 0, 0, 0, 0.994316, 0, 0, 0, 0.994316, 0.0616043, 4.70864, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody" index="0"]
+shape = SubResource( 1 )
+
+[node name="Pillar" parent="." index="1"]
+material/0 = SubResource( 2 )
+
+[node name="Monitor" parent="." index="2"]
+material/0 = SubResource( 3 )
+material/1 = SubResource( 4 )
+
+[node name="Stand" parent="." index="3"]
+material/0 = SubResource( 5 )
+material/1 = SubResource( 6 )

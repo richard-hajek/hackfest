@@ -1,0 +1,52 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://assets/materials/textures/TexturesCom_Buttons0150_1_M.jpg" type="Texture" id=1]
+[ext_resource path="res://assets/models/dae/terminal2.dae" type="PackedScene" id=2]
+[ext_resource path="res://assets/materials/textures/TexturesCom_Buttons0144_M.jpg" type="Texture" id=3]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 0.454902, 0, 0, 1 )
+metallic = 0.28
+roughness = 0.63
+
+[sub_resource type="SpatialMaterial" id=2]
+metallic = 0.86
+metallic_specular = 1.0
+roughness = 0.19
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_texture = ExtResource( 3 )
+
+[sub_resource type="ViewportTexture" id=4]
+viewport_path = NodePath("Viewport")
+
+[sub_resource type="SpatialMaterial" id=5]
+resource_local_to_scene = true
+albedo_color = Color( 0, 0, 0, 1 )
+albedo_texture = SubResource( 4 )
+metallic_specular = 1.0
+roughness = 0.33
+
+[sub_resource type="SpatialMaterial" id=6]
+albedo_texture = ExtResource( 1 )
+
+[sub_resource type="SpatialMaterial" id=7]
+params_line_width = 0.1
+albedo_color = Color( 0.298039, 0.227451, 0.211765, 1 )
+metallic = 0.29
+metallic_specular = 0.84
+roughness = 0.19
+
+[node name="Terminal" instance=ExtResource( 2 )]
+
+[node name="Cylinder" parent="." index="0"]
+material/0 = SubResource( 1 )
+
+[node name="Cube" parent="." index="1"]
+material/0 = SubResource( 2 )
+material/1 = SubResource( 3 )
+material/2 = SubResource( 5 )
+material/3 = SubResource( 6 )
+material/4 = SubResource( 7 )
+
+[node name="Viewport" type="Viewport" parent="." index="3"]
