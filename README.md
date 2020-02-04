@@ -11,6 +11,7 @@ Hackfest should run on Windows, Linux, however Windows is untested.
 - Vagrant
 - Virtual Box
 - Godot
+- C# Mono
 
 ## Instructions
 
