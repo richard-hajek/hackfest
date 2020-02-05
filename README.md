@@ -41,12 +41,21 @@ There are sets of tests, `DIAGNOSTICS A` and `DIAGNOSTICS B`. `A` runs from GDSc
 
 ![Screenshot of terminal](https://i.imgur.com/yX2SClH.png)
 
+## Controls
+
+WASD - move
+Left click - open terminal
+SHIFT+ESC - close terminal
+
 ## Spoilers! - Demo Level Solutions
 
 Expand details for solutions
 
 <details>
+  
   For all levels, you need to click left on the little panel on the right to open the door controller command line.
+  
+  Exit the terminal with SHIFT+ESC
   
   Level 1, "Door is a device; Key is the number 1": Door is located in /dev/by_id/door/in You need to  `echo 1 > /dev/by_id/door/in`
   
