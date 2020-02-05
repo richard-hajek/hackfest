@@ -41,8 +41,14 @@ There are sets of tests, `DIAGNOSTICS A` and `DIAGNOSTICS B`. `A` runs from GDSc
 
 ![Screenshot of terminal](https://i.imgur.com/yX2SClH.png)
 
-## Spoiler! - Demo Level Hints
+## Spoilers! - Demo Level Solutions
+
+Expand details for solutions
 
 <details>
-  testing  
+  Level 1, "Door is a device; Key is the number 1": You need to echo 1 into /dev/by_id/door/in
+  Level 2, "SSH Port is?": You need to echo 22 into /dev/by_id/door/in
+  Level 3, "Find alpha": Key is hidden in /bin/key_alpha, it is 78963, so echo 78963 into /dev/by_id/door/in
+  Level 4, "Double door conundrum": There are two doors, which open and close in for opposite signals. On "echo 1 > /dev/by_id/double_door/in" door 1 closes and door 2 opens. On echo 0 the opposite. You need to "echo 0 > /dev/by_id/double_door/in && sleep 5 && echo 1 > /dev/by_id/double_door/in". Then go stand between the doors.
+  Level 5, "The Door will tell": You need to output (cat) /dev/by_id/door/out. The key is 1452, so the answer is to echo 1452 to /dev/by_id/door/in
 </detials>
