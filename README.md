@@ -8,10 +8,10 @@ Hackfest should run on Windows, Linux, however Windows is untested.
 
 ## Dependencies
 
-- Vagrant
-- Virtual Box
-- Godot
-- C# Mono
+- Vagrant [Download](https://www.vagrantup.com/downloads.html)
+- Virtual Box [Download](https://www.virtualbox.org/wiki/Downloads) (You're looking for <Your OS> host)
+- Godot [Download](https://godotengine.org/download/linux) (You need Mono version)
+- C# Mono [Download](https://www.mono-project.com/download/stable) 
 
 ## Instructions ( Arch Linux )
 
