@@ -40,3 +40,9 @@ There are sets of tests, `DIAGNOSTICS A` and `DIAGNOSTICS B`. `A` runs from GDSc
 ![Screenshot of hallway](https://i.imgur.com/ujAetXO.png)
 
 ![Screenshot of terminal](https://i.imgur.com/yX2SClH.png)
+
+## Spoiler! - Demo Level Hints
+
+<details>
+  testing  
+</detials>
