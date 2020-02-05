@@ -31,7 +31,7 @@ enabled=PoolStringArray( "godot-vm-plugin" )
 
 "Dry Mode"=false
 wait_for_debugger=true
-Diagnostics=true
+Diagnostics=false
 
 [input]
 

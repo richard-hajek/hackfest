@@ -139,6 +139,30 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 5, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 )
+tracks/2/type = "value"
+tracks/2/path = NodePath("Red:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Green:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, false ]
+}
 
 [sub_resource type="Animation" id=13]
 resource_name = "closing"
@@ -157,6 +181,30 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = PoolRealArray( 0, 1, 0, 0, -1.11651, 0, 0, 0, 1, 1, 1, 1, 2, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 )
+tracks/2/type = "value"
+tracks/2/path = NodePath("Red:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Green:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, false ]
+}
 
 [sub_resource type="Animation" id=14]
 resource_name = "open"
@@ -175,6 +223,30 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = PoolRealArray( 0, 1, 0, 0, -1.04538, 0, 0, 0, 1, 1, 1, 1, 2, 1, 0, 0, -1.04538, 0, 0, 0, 1, 1, 1, 1 )
+tracks/2/type = "value"
+tracks/2/path = NodePath("Red:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Green:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, true ]
+}
 
 [sub_resource type="Animation" id=15]
 resource_name = "opening"
@@ -193,11 +265,46 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 1, 0, 0, -1.04538, 0, 0, 0, 1, 1, 1, 1 )
+tracks/2/type = "value"
+tracks/2/path = NodePath("Red:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Green:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
 
 [node name="Door" instance=ExtResource( 1 )]
 script = ExtResource( 5 )
 
-[node name="Left" type="Spatial" parent="." index="0"]
+[node name="Red" type="OmniLight" parent="." index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.131401, 2.70934, 0.269235 )
+light_color = Color( 0.976471, 0.184314, 0.027451, 1 )
+light_energy = 0.5
+
+[node name="Green" type="OmniLight" parent="." index="1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.131401, 2.70934, -0.383565 )
+visible = false
+light_color = Color( 0.00392157, 0.945098, 0.0392157, 1 )
+light_energy = 0.5
+
+[node name="Left" type="Spatial" parent="." index="2"]
 
 [node name="WindowLeft" type="MeshInstance" parent="Left" index="0"]
 transform = Transform( 1.28189e-07, -0.641613, 0, 0.658369, 1.24927e-07, 0, 0, 0, 0.427932, -0.0154721, 1.92221, 0.572782 )
@@ -219,7 +326,7 @@ material/0 = ExtResource( 3 )
 [node name="CollisionShape" type="CollisionShape" parent="Left/FrameLeft/StaticBody" index="0"]
 shape = SubResource( 6 )
 
-[node name="Right" type="Spatial" parent="." index="1"]
+[node name="Right" type="Spatial" parent="." index="3"]
 
 [node name="BottomPanelRight" type="MeshInstance" parent="Right" index="0"]
 transform = Transform( 8.6202e-08, -0.442726, -5.94842e-08, 0.442726, 8.6202e-08, 1.1582e-14, 0, -5.94842e-08, 0.442726, -0.00242857, 0.696917, 0.533347 )
@@ -241,31 +348,31 @@ material/0 = ExtResource( 3 )
 [node name="CollisionShape" type="CollisionShape" parent="Right/FrameRight/StaticBody" index="0"]
 shape = SubResource( 10 )
 
-[node name="WindowLeft" parent="." index="2"]
+[node name="WindowLeft" parent="." index="4"]
 visible = false
 
-[node name="FrameLeft" parent="." index="3"]
+[node name="FrameLeft" parent="." index="5"]
 visible = false
 
-[node name="BottomPanelLeft" parent="." index="4"]
+[node name="BottomPanelLeft" parent="." index="6"]
 visible = false
 
-[node name="Light" parent="." index="5"]
+[node name="Light" parent="." index="7"]
 material/0 = SubResource( 11 )
 
-[node name="Header" parent="." index="6"]
+[node name="Header" parent="." index="8"]
 material/0 = ExtResource( 3 )
 
-[node name="BottomPanelRight" parent="." index="7"]
+[node name="BottomPanelRight" parent="." index="9"]
 visible = false
 
-[node name="WindowRight" parent="." index="8"]
+[node name="WindowRight" parent="." index="10"]
 visible = false
 
-[node name="FrameRight" parent="." index="10"]
+[node name="FrameRight" parent="." index="12"]
 visible = false
 
-[node name="AnimationPlayer" parent="." index="11"]
+[node name="AnimationPlayer" parent="." index="13"]
 autoplay = "closed"
 anims/closed = SubResource( 12 )
 anims/closing = SubResource( 13 )

@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://assets/models/interactive/door_old_school.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/models/static/rooms.tscn" type="PackedScene" id=2]
@@ -6,19 +6,23 @@
 [ext_resource path="res://assets/models/static/key_reader.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/models/static/tablet.tscn" type="PackedScene" id=5]
 [ext_resource path="res://addons/godot-vm-plugin/ContainerNode.cs" type="Script" id=6]
-[ext_resource path="res://assets/models/escn/hint_door_device_key_one.escn" type="PackedScene" id=7]
-[ext_resource path="res://assets/models/escn/hint_ssh_port.escn" type="PackedScene" id=8]
-[ext_resource path="res://assets/models/escn/hint_find_alpha.escn" type="PackedScene" id=9]
-[ext_resource path="res://assets/models/escn/hint_double_door.escn" type="PackedScene" id=10]
+[ext_resource path="res://assets/models/static/hints/hint_door_device_key_one.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/models/static/hints/hint_ssh_port.tscn" type="PackedScene" id=8]
+[ext_resource path="res://assets/models/static/hints/hint_find_alpha.tscn" type="PackedScene" id=9]
+[ext_resource path="res://assets/models/static/hints/hint_double_door.tscn" type="PackedScene" id=10]
 [ext_resource path="res://assets/scripts/double_door.gd" type="Script" id=11]
-[ext_resource path="res://assets/models/escn/hint_finish.escn" type="PackedScene" id=12]
+[ext_resource path="res://assets/models/static/hints/hint_finish.tscn" type="PackedScene" id=12]
 [ext_resource path="res://assets/cake/cake.tscn" type="PackedScene" id=13]
+[ext_resource path="res://assets/models/static/hints/hint_door_will_tell.tscn" type="PackedScene" id=14]
 
 [sub_resource type="ProceduralSky" id=1]
 
 [sub_resource type="Environment" id=2]
 background_mode = 1
 background_sky = SubResource( 1 )
+ambient_light_color = Color( 0.94902, 0.909804, 0.909804, 1 )
+ambient_light_energy = 0.5
+ambient_light_sky_contribution = 0.1
 fog_enabled = true
 fog_color = Color( 0.996078, 0.980392, 0.980392, 1 )
 fog_depth_end = 50.0
@@ -35,7 +39,7 @@ environment = SubResource( 2 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.50537, 0.950127, 0.0896921 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -14.0625, 0.1879, 0.123394 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 11.0356, 0.1879, 0.123394 )
 Accel = 2.0
 JumpSpeed = 0.0
 MaxSpeed = 10.0
@@ -44,9 +48,6 @@ MaxSpeed = 10.0
 transform = Transform( 0.870582, -0.386777, -0.304122, 0.0161303, 0.640209, -0.768031, 0.491758, 0.663729, 0.563593, 0.34198, 0.999672, -0.580291 )
 
 [node name="Room1" type="Spatial" parent="."]
-
-[node name="hint_door_device_key_one" parent="Room1" instance=ExtResource( 7 )]
-transform = Transform( 0.365853, 0, 0, 0, -1.59919e-08, -0.365853, 0, 0.365853, -1.59919e-08, -14.6516, 1.94523, -1.77421 )
 
 [node name="door" parent="Room1" instance=ExtResource( 1 )]
 transform = Transform( -0.877332, 0, -7.66988e-08, 0, 0.877332, 0, 7.66988e-08, 0, -0.877332, -10.5716, -0.200252, 0.144868 )
@@ -59,16 +60,12 @@ WorkingDirectoryName = "tutorial.main"
 Peripheral1 = NodePath("../door")
 
 [node name="key_reader" parent="Room1/Docker Container" instance=ExtResource( 4 )]
-transform = Transform( 0.197093, 0, 1.45467, 0, 1.46796, 0, -1.45467, 0, 0.197093, -10.9619, 0.937346, 2.04522 )
+transform = Transform( 0.197093, 0, 1.45467, 0, 1.46796, 0, -1.45467, 0, 0.197093, -11.1289, 0.937346, 2.04522 )
 
-[node name="Light" type="OmniLight" parent="Room1"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.8613, 2.22648, 0.46537 )
-omni_range = 9.54189
+[node name="hint_door_device_key_one" parent="Room1" instance=ExtResource( 7 )]
+transform = Transform( 0.340768, 0, 0, 0, -1.48954e-08, -0.340768, 0, 0.340768, -1.48954e-08, -14.4101, 1.78708, -1.56932 )
 
 [node name="Room2" type="Spatial" parent="."]
-
-[node name="hint_ssh_port" parent="Room2" instance=ExtResource( 8 )]
-transform = Transform( 0.74596, 0, 0, 0, -3.26069e-08, -0.74596, 0, 0.74596, -3.26069e-08, -8.64018, 1.54928, -1.77314 )
 
 [node name="Docker Container2" type="Spatial" parent="Room2"]
 script = ExtResource( 6 )
@@ -78,15 +75,14 @@ WorkingDirectoryName = "tutorial.main"
 Peripheral1 = NodePath("../door")
 
 [node name="key_reader" parent="Room2/Docker Container2" instance=ExtResource( 4 )]
-transform = Transform( 0.197093, 0, 1.45467, 0, 1.46796, 0, -1.45467, 0, 0.197093, -6.27967, 0.937346, 2.00536 )
-
-[node name="Light2" type="OmniLight" parent="Room2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.56147, 2.17959, 0.481788 )
-omni_range = 9.54189
+transform = Transform( 0.197093, 0, 1.45467, 0, 1.46796, 0, -1.45467, 0, 0.197093, -6.0363, 0.937346, 2.00536 )
 
 [node name="door" parent="Room2" instance=ExtResource( 1 )]
 transform = Transform( -0.877332, 0, -7.66988e-08, 0, 0.877332, 0, 7.66988e-08, 0, -0.877332, -4.37321, -0.200252, 0.144868 )
 open_key = [ "2", "2" ]
+
+[node name="hint_ssh_port" parent="Room2" instance=ExtResource( 8 )]
+transform = Transform( 0.668119, 0, 0, 0, -2.92044e-08, -0.668119, 0, 0.668119, -2.92044e-08, -8.7332, 1.70398, -1.76055 )
 
 [node name="Room3" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.94888, 0, 0 )
@@ -94,27 +90,26 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.94888, 0, 0 )
 [node name="Docker Container2" type="Spatial" parent="Room3"]
 script = ExtResource( 6 )
 Dockerfile = "FROM busybox
-RUN sh -c \"echo 78963 > /bin/ggg_alpha\"
+RUN sh -c \"echo 78963 > /bin/key_alpha\"
 CMD sh"
 WorkingDirectoryName = "tutorial.main"
 Peripheral1 = NodePath("../door")
 
 [node name="key_reader" parent="Room3/Docker Container2" instance=ExtResource( 4 )]
-transform = Transform( 0.197093, 0, 1.45467, 0, 1.46796, 0, -1.45467, 0, 0.197093, -6.27967, 0.937346, 2.00536 )
-
-[node name="Light2" type="OmniLight" parent="Room3"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.56147, 2.17959, 0.481788 )
-omni_range = 9.54189
+transform = Transform( 0.197093, 0, 1.45467, 0.0186602, 1.46784, -0.00252827, -1.45455, 0.0188307, 0.197077, -5.76326, 1.12025, 2.00536 )
 
 [node name="door" parent="Room3" instance=ExtResource( 1 )]
 transform = Transform( -0.877332, 0, -7.66988e-08, 0, 0.877332, 0, 7.66988e-08, 0, -0.877332, -4.37321, -0.200252, 0.144868 )
 open_key = [ "7", "8", "9", "6", "3" ]
 
-[node name="hint_find_alpha" parent="Room3/door" instance=ExtResource( 9 )]
-transform = Transform( -1, 8.74229e-08, -1.74846e-07, 1.74846e-07, -4.37114e-08, -1, -8.74229e-08, -1, 4.37114e-08, 4.59501, 1.95158, 2.20948 )
+[node name="hint_find_alpha" parent="Room3" instance=ExtResource( 9 )]
+transform = Transform( 0.724889, 0, 0, 0, -3.16859e-08, -0.724889, 0, 0.724889, -3.16859e-08, -8.03249, 1.63843, -1.69872 )
 
 [node name="Room4" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.37, 0, 0 )
+
+[node name="hint_double_door" parent="Room4" instance=ExtResource( 10 )]
+transform = Transform( 0.488193, 0, 0, 0, -2.13396e-08, -0.488193, 0, 0.488193, -2.13396e-08, -8.22273, 1.89961, -1.74499 )
 
 [node name="Docker Container2" type="Spatial" parent="Room4"]
 script = ExtResource( 6 )
@@ -124,14 +119,7 @@ WorkingDirectoryName = "tutorial.main"
 Peripheral1 = NodePath("../double_door")
 
 [node name="key_reader" parent="Room4/Docker Container2" instance=ExtResource( 4 )]
-transform = Transform( 0.197093, 0, 1.45467, 0, 1.46796, 0, -1.45467, 0, 0.197093, -6.27967, 0.937346, 2.00536 )
-
-[node name="Light2" type="OmniLight" parent="Room4"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.56147, 2.17959, 0.481788 )
-omni_range = 9.54189
-
-[node name="hint_double_door" parent="Room4" instance=ExtResource( 10 )]
-transform = Transform( 0.720908, 0, 0, 0, -2.14847e-08, -0.720908, 0, 0.720908, -2.14847e-08, -8.73652, 1.93728, -1.81953 )
+transform = Transform( 0.197093, 0, 1.45467, 0, 1.46796, 0, -1.45467, 0, 0.197093, -5.91405, 1.11073, 2.00536 )
 
 [node name="double_door" type="Spatial" parent="Room4"]
 script = ExtResource( 11 )
@@ -142,20 +130,41 @@ transform = Transform( -0.877332, 0, -7.66988e-08, 0, 0.877332, 0, 7.66988e-08, 
 [node name="door" parent="Room4/double_door" instance=ExtResource( 1 )]
 transform = Transform( -0.877332, 0, -7.66988e-08, 0, 0.877332, 0, 7.66988e-08, 0, -0.877332, -4.37321, -0.200252, 0.144868 )
 
+[node name="Room5" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.1972, 0, 0 )
+
+[node name="Docker Container2" type="Spatial" parent="Room5"]
+script = ExtResource( 6 )
+Dockerfile = "FROM busybox
+CMD sh"
+WorkingDirectoryName = "tutorial.main"
+Peripheral1 = NodePath("../door")
+
+[node name="key_reader" parent="Room5/Docker Container2" instance=ExtResource( 4 )]
+transform = Transform( 0.197093, 0, 1.45467, 0, 1.46796, 0, -1.45467, 0, 0.197093, -5.76336, 1.13326, 1.82251 )
+
+[node name="door" parent="Room5" instance=ExtResource( 1 )]
+transform = Transform( -0.877332, 0, -7.66988e-08, 0, 0.877332, 0, 7.66988e-08, 0, -0.877332, -4.37321, -0.200252, 0.144868 )
+open_key = [ "1", "4", "5", "2" ]
+on_out = "1452"
+
 [node name="Finish" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.3283, 0, 0 )
 
 [node name="cake" parent="Finish" instance=ExtResource( 13 )]
-transform = Transform( 0.0187976, 0.000315458, 0.000473936, -0.000333904, 0.0187888, 0.000737531, -0.000461126, -0.000745607, 0.0187858, 0.84686, 1.05954, 0.0270628 )
-
-[node name="hint_finish" parent="Finish" instance=ExtResource( 12 )]
-transform = Transform( 0.390978, 0.00656131, 0.00985758, 0.00959112, 0.0155081, -0.390733, -0.006945, 0.390795, 0.0153401, -2.35783, 1.94658, -1.72885 )
+transform = Transform( 0.0136776, 0.000229536, 0.000344849, -0.000229224, 0.013682, -1.52136e-05, -0.000345056, 9.43012e-06, 0.0136796, 7.25045, 0.537318, 0.0270628 )
 
 [node name="OmniLight" type="OmniLight" parent="Finish"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.821776, 2.63869, 0.204814 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.48567, 2.63869, 0.204814 )
 light_color = Color( 0.552941, 0.996078, 0.25098, 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Finish"]
-transform = Transform( 0.376598, 0, 0, 0, 0.980358, 0, 0, 0, 0.376598, 0.861516, 0.0695883, 0 )
+transform = Transform( 0.274199, 0, 0, 0, 0.572849, 0, 0, 0, 0.274199, 7.26511, -0.0382883, 0.0214137 )
 mesh = SubResource( 3 )
 material/0 = null
+
+[node name="hint_finish" parent="Finish" instance=ExtResource( 12 )]
+transform = Transform( 0.47595, 0, 0, 0, -2.08044e-08, -0.47595, 0, 0.47595, -2.08044e-08, 3.77453, 1.81527, -1.75267 )
+
+[node name="hint_door_will_tell" parent="." instance=ExtResource( 14 )]
+transform = Transform( 0.515138, 0, 0, 0, -2.25174e-08, -0.515138, 0, 0.515138, -2.25174e-08, 9.60031, 1.72712, -1.72754 )

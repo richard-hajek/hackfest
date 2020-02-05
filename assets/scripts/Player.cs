@@ -45,7 +45,7 @@ public class Player : KinematicBody
 		_rotationHelper = GetNode<Spatial>("RotationHelper");
 		_flashlight = GetNode<SpotLight>("RotationHelper/Camera/Flashlight");
 		_rayCast = GetNode<RayCast>("RotationHelper/Camera/RayCast");
-		_terminalControl = GetNode<TerminalControl>("GUI/Terminal");
+		_terminalControl = GetNode<TerminalControl>("GUI/TerminalWrapper/Terminal");
 
 		_hotcode1Node = GetNode<HotCode>("GUI/HotCode1");
 
