@@ -44,7 +44,9 @@ There are sets of tests, `DIAGNOSTICS A` and `DIAGNOSTICS B`. `A` runs from GDSc
 ## Controls
 
 WASD - move
+
 Left click - open terminal
+
 SHIFT+ESC - close terminal
 
 ## Spoilers! - Demo Level Solutions
