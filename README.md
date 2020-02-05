@@ -59,7 +59,7 @@ Expand details for solutions
   
   Exit the terminal with SHIFT+ESC
   
-  Level 1, "Door is a device; Key is the number 1": Door is located in /dev/by_id/door/in You need to  `echo 1 > /dev/by_id/door/in`
+  Level 1, "Door is a device; Key is the number 1": Door is located in `/dev/by_id/door/in` You need to  `echo 1 > /dev/by_id/door/in`
   
   Level 2, "SSH Port is?": You need to `echo 22 > /dev/by_id/door/in`
   
