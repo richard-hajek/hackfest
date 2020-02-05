@@ -34,3 +34,9 @@ If you encounter any problems it is a good idea to enable diagnostics. You can e
 Diagnostics will attempt to start Vagrant Virtual Box virtual machine and create a simple container. It will report success. If you need help please run the diagnostics first and then open an issue.
 
 There are sets of tests, `DIAGNOSTICS A` and `DIAGNOSTICS B`. `A` runs from GDScript while `B` runs from Mono. If you see just `A`, there is a good chance the Mono doesn't launch right.
+
+## Screenshots
+
+![Screenshot of hallway](https://i.imgur.com/ujAetXO.png)
+
+![Screenshot of terminal](https://i.imgur.com/yX2SClH.png)
