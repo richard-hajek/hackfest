@@ -8,10 +8,10 @@ Hackfest should run on Windows, Linux, however Windows is untested.
 
 ## Dependencies
 
-- Vagrant
-- Virtual Box
-- Godot
-- C# Mono
+- Vagrant [Download](https://www.vagrantup.com/downloads.html)
+- Virtual Box [Download](https://www.virtualbox.org/wiki/Downloads) (You're looking for <Your OS> host)
+- Godot [Download](https://godotengine.org/download/linux) (You need Mono version)
+- C# Mono [Download](https://www.mono-project.com/download/stable) 
 
 ## Instructions ( Arch Linux )
 
@@ -34,3 +34,9 @@ If you encounter any problems it is a good idea to enable diagnostics. You can e
 Diagnostics will attempt to start Vagrant Virtual Box virtual machine and create a simple container. It will report success. If you need help please run the diagnostics first and then open an issue.
 
 There are sets of tests, `DIAGNOSTICS A` and `DIAGNOSTICS B`. `A` runs from GDScript while `B` runs from Mono. If you see just `A`, there is a good chance the Mono doesn't launch right.
+
+## Screenshots
+
+![Screenshot of hallway](https://i.imgur.com/ujAetXO.png)
+
+![Screenshot of terminal](https://i.imgur.com/yX2SClH.png)
