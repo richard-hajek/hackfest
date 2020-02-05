@@ -16,8 +16,12 @@ _global_script_class_icons={
 [application]
 
 config/name="hackfest2"
-run/main_scene="res://scenes/Tutorial.tscn"
+run/main_scene="res://scenes/Demo.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+diagnostics_initial="*res://assets/scripts/diagnostics_initial.gd"
 
 [editor_plugins]
 
@@ -27,6 +31,7 @@ enabled=PoolStringArray( "godot-vm-plugin" )
 
 "Dry Mode"=false
 wait_for_debugger=true
+Diagnostics=true
 
 [input]
 
