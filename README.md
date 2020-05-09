@@ -25,7 +25,7 @@ Hackfest should run on Windows, Linux, however Windows is untested.
 
 ## Discord
 
-If you need any help or have any questions pop up to this support Discord channel: [Invite link](https://discord.gg/BZBCH45) 
+If you need any help or have any questions pop up to this support Discord channel: [Invite link](https://discord.gg/3m27P4T) 
 
 ## Diagnostics
 
