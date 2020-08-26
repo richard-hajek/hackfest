@@ -39,7 +39,7 @@ environment = SubResource( 2 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.50537, 0.950127, 0.0896921 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 11.0356, 0.1879, 0.123394 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -14.0509, 0.1879, 0.123394 )
 Accel = 2.0
 JumpSpeed = 0.0
 MaxSpeed = 10.0
@@ -56,7 +56,6 @@ transform = Transform( -0.877332, 0, -7.66988e-08, 0, 0.877332, 0, 7.66988e-08, 
 script = ExtResource( 6 )
 Dockerfile = "FROM busybox
 CMD sh"
-WorkingDirectoryName = "tutorial.main"
 Peripheral1 = NodePath("../door")
 
 [node name="key_reader" parent="Room1/Docker Container" instance=ExtResource( 4 )]
@@ -71,7 +70,6 @@ transform = Transform( 0.340768, 0, 0, 0, -1.48954e-08, -0.340768, 0, 0.340768, 
 script = ExtResource( 6 )
 Dockerfile = "FROM busybox
 CMD sh"
-WorkingDirectoryName = "tutorial.main"
 Peripheral1 = NodePath("../door")
 
 [node name="key_reader" parent="Room2/Docker Container2" instance=ExtResource( 4 )]
@@ -92,7 +90,6 @@ script = ExtResource( 6 )
 Dockerfile = "FROM busybox
 RUN sh -c \"echo 78963 > /bin/key_alpha\"
 CMD sh"
-WorkingDirectoryName = "tutorial.main"
 Peripheral1 = NodePath("../door")
 
 [node name="key_reader" parent="Room3/Docker Container2" instance=ExtResource( 4 )]
@@ -115,7 +112,6 @@ transform = Transform( 0.488193, 0, 0, 0, -2.13396e-08, -0.488193, 0, 0.488193, 
 script = ExtResource( 6 )
 Dockerfile = "FROM busybox
 CMD sh"
-WorkingDirectoryName = "tutorial.main"
 Peripheral1 = NodePath("../double_door")
 
 [node name="key_reader" parent="Room4/Docker Container2" instance=ExtResource( 4 )]
@@ -137,7 +133,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.1972, 0, 0 )
 script = ExtResource( 6 )
 Dockerfile = "FROM busybox
 CMD sh"
-WorkingDirectoryName = "tutorial.main"
 Peripheral1 = NodePath("../door")
 
 [node name="key_reader" parent="Room5/Docker Container2" instance=ExtResource( 4 )]

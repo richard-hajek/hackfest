@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/composite/beam.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/composite/wakeup_room.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/composite/room.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/import/catwalk_straight.gltf" type="PackedScene" id=4]
+
+[node name="root" type="Spatial"]
+
+[node name="beam5" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 0.0110841, -0.999999, 0, 0.841039, 0.000174903, -0.743035, 6.44477, -4.13661 )
+
+[node name="beam6" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 0.0110841, -0.999999, 0, 0.841039, 0.000174903, -7.26195, 6.44477, -4.13661 )
+
+[node name="Room" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.84007, 0.559929, 0.389013 )
+
+[node name="beam" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 7.29972, 0, 0, 0, 1, -0.522807, 2.11369, 2.46044 )
+
+[node name="beam2" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 7.29972, 0, 0, 0, 1, -7.29254, 2.11369, 2.46044 )
+
+[node name="beam3" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 7.29971, 0.00151844, 0, -0.0110842, 0.999999, -0.522807, 2.11369, -1.64122 )
+
+[node name="beam4" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 7.29972, 0, 0, 0, 1, -7.29254, 2.11369, -1.64122 )
+
+[node name="Room2" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.89682, 3.81008, 0.337018 )
+
+[node name="Room3" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.89682, 7.07554, 0.337018 )
+
+[node name="Room5" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 0.308486, 0.951229, 0, -0.951229, 0.308486, -3.89682, 11.6077, 1.72652 )
+
+[node name="Room4" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.89682, 7.07554, -3.74158 )
+
+[node name="catwalk_straight" parent="." instance=ExtResource( 4 )]
+transform = Transform( 0.97108, 0, 0.238754, 0, 1, 0, -0.238754, 0, 0.97108, 2.42164, 0.306546, 0.572467 )
+
+[node name="catwalk_straight2" parent="." instance=ExtResource( 4 )]
+transform = Transform( 0.97108, 0, 0.238754, 0, 1, 0, -0.238754, 0, 0.97108, 12.7487, 0.306546, -2.00928 )
+
+[node name="catwalk_straight3" parent="." instance=ExtResource( 4 )]
+transform = Transform( 0.97108, 0, 0.238754, 0, 1, 0, -0.238754, 0, 0.97108, 7.58515, 0.306546, -0.718408 )

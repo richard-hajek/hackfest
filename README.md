@@ -70,3 +70,8 @@ Expand details for solutions
   Level 5, "The Door will tell": You need to output `cat /dev/by_id/door/out`. The key is 1452, so the answer is to `echo 1452 > /dev/by_id/door/in`
   
 </detials>
+
+## License attributins
+
+- selector_square_border - Icon made by [Freepik](https://www.flaticon.com/authors/freepik) from [www.flaticon.com](https://www.flaticon.com)
+- arrow - Icon made by [Roundicons](https://www.flaticon.com/authors/roundicons) from [www.flaticon.com](https://www.flaticon.com)

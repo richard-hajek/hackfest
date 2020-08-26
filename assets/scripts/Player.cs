@@ -52,6 +52,8 @@ public class Player : KinematicBody
 		Input.SetMouseMode(Input.MouseMode.Captured);
 		
 		_spawn = GlobalTransform.origin;
+
+		var gui = GetNode<Control>("GUI").Call("point_to", "Spatial/Room1/Docker Container/key_reader/Device");
 	}
 
 	public override void _PhysicsProcess(float delta)
