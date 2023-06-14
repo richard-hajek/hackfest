@@ -23,10 +23,6 @@ Hackfest should run on Windows, Linux, however Windows is untested.
 4. Navigate to `scenes/Demo` in FileSystem explorer
 5. Run the scene using an icon in upper right corner
 
-## Discord
-
-If you need any help or have any questions pop up to this support Discord channel: [Invite link](https://discord.gg/3m27P4T) 
-
 ## Diagnostics
 
 If you encounter any problems it is a good idea to enable diagnostics. You can enable them by going to `Project/Project Settings` and set variable `Diagnostics` in `Global` scope to true.
